@@ -1,4 +1,4 @@
-class PokeDEXCLI :: CLI
+class PokeDEXCLI::CLI
     def start
         system('clear')
 

@@ -1,17 +1,25 @@
 class PokeDEXCLI::Pokemon
-    attr_accessor :name, :number, :moves, :types, 
+    attr_accessor :name, :number, :moves, :types 
 
     @@all = []
 
     def initialize(attr_hash)
+        attr_hash.each do |key, value|
+            self.send("#{key}=", value) if self.respond_to?("#{key}=")
     end
-end
+    self.save
+  end
+
+ def save
+    @@all << self
+ end
+
+ def self.all
+    @@all
+ end
+end        
         
         
         
         
-        #can't commit to github
-        #possible nesting issue?
-        #is the attr method usable if I recieve more data and I do not want to use it all.
-        #trouble running file
-        #quick once over
+       
