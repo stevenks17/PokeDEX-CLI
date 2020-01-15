@@ -40,9 +40,9 @@ class PokeDEXCLI::CLI
       def sub_menu_input
         user_input = gets.strip
     
-        if user_input.to_i.between?(1, PokeDEXCLI::Character.all.length)
-          character = PokeDEXCLI::Character.all[user_input.to_i - 1]
-          print_character_details(character)
+        if user_input.to_i.between?(1, PokeDEXCLI::Pokemon.all.length)
+          character = PokeDEXCLI::Pokemon.all[user_input.to_i - 1]
+          print_pokemon_details(pokemon)
           continue?
         elsif user_input.downcase == "exit"
           goodbye
@@ -52,17 +52,17 @@ class PokeDEXCLI::CLI
         end
       end
     
-      def list_characters
-        PokeDEXCLI::Character.all.each.with_index(1) do |character, i|
-          puts "#{i}. #{character.name}"
+      def list_pokemon
+        PokeDEXCLI::Pokemon.all.each.with_index(1) do |pokemon, i|
+          puts "#{i}. #{pokemon.name}"
         end
       end
     
-      def print_character_details(character)
-        puts "Name: #{character.name}"
-        puts "Number: #{character.number}"
-        puts "Moves: #{character.moves}"
-        puts "Types: #{character.types}"
+      def print_pokemon_details(pokemon)
+        puts "Name: #{pokemon.name}"
+        puts "Number: #{pokemon.id}"
+        puts "Moves: #{pokemon.moves}"
+        puts "Types: #{pokemon.types}"
       end
     
       def continue?
