@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 
 require_relative "../lib/environment"
-PokeDEXCLI::API.get_all_pokemon
+#PokeDEXCLI::API.get_all_pokemon

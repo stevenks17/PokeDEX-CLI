@@ -8,7 +8,7 @@ class PokeDEXCLI::API
             response = RestClient.get("https://pokeapi.co/api/v2/pokemon?limit=151")
         end
         pokemon_array = JSON.parse(response.body)["results"]
-binding.pry
+#binding.pry
         pokemon_array.each do |pokemon|
             PokeDEXCLI::Pokemon.new(pokemon)
         end

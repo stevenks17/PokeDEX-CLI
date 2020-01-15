@@ -60,11 +60,9 @@ class PokeDEXCLI::CLI
     
       def print_character_details(character)
         puts "Name: #{character.name}"
-        puts "Height: #{character.height}"
-        puts "Mass: #{character.mass}"
-        puts "Hair Color: #{character.hair_color}"
-        puts "Skin Color: #{character.skin_color}"
-        puts "Eye Color: #{character.eye_color}"
+        puts "Number: #{character.number}"
+        puts "Moves: #{character.moves}"
+        puts "Types: #{character.types}"
       end
     
       def continue?
