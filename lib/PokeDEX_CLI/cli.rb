@@ -5,21 +5,21 @@ class PokeDEXCLI::CLI
         puts "Welcome to your PokeDEX!"
         puts "Loading Data..."
 
-        PokeDEXCLI ::API.new.get_all_pokemon
+        PokeDEXCLI::API.new.get_all_pokemon
 
         puts "Data loaded..."
         main_menu_options
     end
 
     def main_menu_options
-        puts "Type '1' in order to get a list of all 151 Kanto Region Pokemon"
-        puts "Type 'exit' to exit program"
+        puts "Type '1' in order to get a list of all 151 Kanto Region Pokemon."
+        puts "Type 'exit' to exit program."
         main_menu_input
       end
     
       def sub_menu_options
-        puts "Type number associated with a Pokemon in order to get more information about the character"
-        puts "Type 'exit' to exit program"
+        puts "Type the number associated with a Pokemon in order to get more information about it."
+        puts "Type 'exit' to exit program."
         sub_menu_input
       end
     
@@ -61,7 +61,6 @@ class PokeDEXCLI::CLI
       def print_pokemon_details(pokemon)
         puts "Name: #{pokemon.name}"
         puts "Number: #{pokemon.id}"
-        puts "Moves: #{pokemon.moves}"
         puts "Types: #{pokemon.types}"
       end
     

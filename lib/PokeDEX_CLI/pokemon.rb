@@ -1,5 +1,5 @@
 class PokeDEXCLI::Pokemon
-    attr_accessor :name, :number, :moves, :types 
+    attr_accessor :name, :number, :types 
 
     @@all = []
 

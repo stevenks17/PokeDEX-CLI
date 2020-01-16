@@ -1,7 +1,7 @@
 class PokeDEXCLI::API
     BASE_URL = "https://pokeapi.co"
 
-    def self.get_all_pokemon(page=nil)
+    def get_all_pokemon(page=nil)
         if page
             response = RestClient.get(page)
         else 
