@@ -1,5 +1,5 @@
 class PokeDEXCLI::Pokemon
-    attr_accessor :name, :id, :weight 
+    attr_accessor :name, :id, :height, :weight
 
     @@all = []
 

@@ -62,8 +62,9 @@ class PokeDEXCLI::CLI
     
       def print_pokemon_details(pokemon)
         puts "Name: #{pokemon.name.capitalize}"
-        puts "Number: #{pokemon.id}"
-        puts "Weight: #{pokemon.weight} lbs."
+        puts "PokeDEX Entry: #{pokemon.id}"
+        puts "Height: #{pokemon.height} decimeters"
+        puts "Weight: #{pokemon.weight} hectograms"
       end
     #PokeApi.get(pokemon: 'bulbasaur')
       def continue?
