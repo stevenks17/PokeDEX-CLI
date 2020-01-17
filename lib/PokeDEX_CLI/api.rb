@@ -8,13 +8,17 @@ class PokeDEXCLI::API
             response = RestClient.get("https://pokeapi.co/api/v2/pokemon?limit=151")
         end
         pokemon_array = JSON.parse(response.body)["results"]
-#binding.pry
+
         pokemon_array.each do |pokemon|
-            PokeDEXCLI::Pokemon.new(pokemon)
+            
+            pokemon_response = RestClient.get(pokemon["url"])
+            pokemon_details = JSON.parse(pokemon_response.body)
+            #binding.pry
+            PokeDEXCLI::Pokemon.new(pokemon_details)
         end
     end
 
-    def 
+     #/api/v2/pokemon-species/{id or name}/ will give flavor text
 
 end
     
