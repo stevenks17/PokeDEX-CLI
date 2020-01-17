@@ -13,5 +13,8 @@ class PokeDEXCLI::API
             PokeDEXCLI::Pokemon.new(pokemon)
         end
     end
+
+    def 
+
 end
     

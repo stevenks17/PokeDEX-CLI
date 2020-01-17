@@ -1,5 +1,5 @@
 class PokeDEXCLI::Pokemon
-    attr_accessor :name, :number, :types 
+    attr_accessor :name, :id, :weight 
 
     @@all = []
 
@@ -19,7 +19,8 @@ class PokeDEXCLI::Pokemon
  end
 end        
         
-        
-        
+        # api.get description method go in pokemon or api ? this will be for flavor text.
+        # ascii art format issue
+        # go over cli and requirements
         
        

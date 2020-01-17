@@ -2,12 +2,14 @@ class PokeDEXCLI::CLI
     def start
         system('clear')
 
+  
+
         puts "Welcome to your PokeDEX!"
         puts "Loading Data..."
 
         PokeDEXCLI::API.new.get_all_pokemon
 
-        puts "Data loaded..."
+        puts "PokeDEX data loaded..."
         main_menu_options
     end
 
@@ -41,7 +43,7 @@ class PokeDEXCLI::CLI
         user_input = gets.strip
     
         if user_input.to_i.between?(1, PokeDEXCLI::Pokemon.all.length)
-          character = PokeDEXCLI::Pokemon.all[user_input.to_i - 1]
+          pokemon = PokeDEXCLI::Pokemon.all[user_input.to_i - 1]
           print_pokemon_details(pokemon)
           continue?
         elsif user_input.downcase == "exit"
@@ -54,16 +56,16 @@ class PokeDEXCLI::CLI
     
       def list_pokemon
         PokeDEXCLI::Pokemon.all.each.with_index(1) do |pokemon, i|
-          puts "#{i}. #{pokemon.name}"
+          puts "#{i}. #{pokemon.name.capitalize}"
         end
       end
     
       def print_pokemon_details(pokemon)
-        puts "Name: #{pokemon.name}"
+        puts "Name: #{pokemon.name.capitalize}"
         puts "Number: #{pokemon.id}"
-        puts "Types: #{pokemon.types}"
+        puts "Weight: #{pokemon.weight} lbs."
       end
-    
+    #PokeApi.get(pokemon: 'bulbasaur')
       def continue?
         puts "Type '1' for main menu, '2', to select another pokemon, 'exit' to exit program"
     
@@ -72,7 +74,7 @@ class PokeDEXCLI::CLI
         if user_input == "1"
           main_menu_options
         elsif user_input == "2"
-          list_characters
+          list_pokemon
           sub_menu_options
         elsif user_input == "exit"
           goodbye
