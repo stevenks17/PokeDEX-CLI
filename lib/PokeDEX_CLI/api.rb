@@ -18,7 +18,7 @@ class PokeDEXCLI::API
         end
     end
 
-     #/api/v2/pokemon-species/{id or name}/ will give flavor text
+     
 
 end
     

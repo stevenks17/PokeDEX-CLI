@@ -66,7 +66,7 @@ class PokeDEXCLI::CLI
         puts "Height: #{pokemon.height} decimeters"
         puts "Weight: #{pokemon.weight} hectograms"
       end
-    #PokeApi.get(pokemon: 'bulbasaur')
+    
       def continue?
         puts "Type '1' for main menu, '2', to select another pokemon, 'exit' to exit program"
     
