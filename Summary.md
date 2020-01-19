@@ -1,0 +1,3 @@
+Summary
+
+My PokeDEX-CLI takes in data from the POKE-API site and parses the information for use in the CLI. Once the data is grabbed it is utilized in the CLI and pokemon files by displaying a list of the first 151 pokemon that are in the Kanto region and initializing each pokemon object with the attributes I created. The pokemon object uses the same keys that the hash is passing in from the API to display the information in the CLI. From here the user will have the choice to select a pokemon to view some details about them or exit the CLI. Once a pokemon is chosen it will display their height,weight, and pokedex entry number. After that the CLI will allow the user to select another pokemon go back to main menu or exit the program.
