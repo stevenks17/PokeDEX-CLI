@@ -2,11 +2,8 @@ class PokeDEXCLI::API
     BASE_URL = "https://pokeapi.co"
 
     def get_all_pokemon(page=nil)
-        if page
-            response = RestClient.get(page)
-        else 
-            response = RestClient.get("https://pokeapi.co/api/v2/pokemon?limit=151")
-        end
+        response = RestClient.get("https://pokeapi.co/api/v2/pokemon?limit=151")
+        
         pokemon_array = JSON.parse(response.body)["results"]
 
         pokemon_array.each do |pokemon|
